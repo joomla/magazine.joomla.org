@@ -13,6 +13,7 @@ div.acymailing_module .acymailing_form {
   	margin-top: 20px !important;
 }
 
+/* EasBlog */
 div#eb {
     clear: both;
 }
@@ -1573,6 +1574,17 @@ div#eb {
 #eb .eb-cards--2 {
 	margin-left: -16px;
 	margin-right: -16px;
+}
+
+/* Blog Magazine
+Added: 2020-04-20 - Mark Lee / WilcoA
+*/
+#eb .eb-mag.eb-mag-list .eb-more {
+	margin-top: 30px;	
+}
+
+#eb .eb-mag-table + .eb-mag-table {
+	margin-top: 30px;
 }
 
 /*blog navigation*/
