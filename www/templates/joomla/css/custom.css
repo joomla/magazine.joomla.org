@@ -1,18 +1,3 @@
-/*2018 - ACYmailing module*/
-div.acymailing_module .acymailing_lists {
-  	clear: both;
-  	padding-top: 10px !important;
-}
-div.acymailing_module input[type="checkbox"] {
-	margin: 0 5px 0 0;
-}
-div.acymailing_module .acysubbuttons {
-	text-align: left;
-}
-div.acymailing_module .acymailing_form {
-  	margin-top: 20px !important;
-}
-
 /* EasBlog */
 div#eb {
     clear: both;
@@ -1410,7 +1395,6 @@ div#eb {
 	box-shadow: none;
 }
 
-/* _mod_easyblogmostpopularpost */
 .jmv-title {
 	font-size: 2.4em;
 	line-height: 1;
@@ -1586,6 +1570,19 @@ Added: 2020-04-20 - Mark Lee / WilcoA
 
 #eb .eb-mag-table + .eb-mag-table {
 	margin-top: 30px;
+}
+
+/* Sticky Progress bar
+Added: 2020-06-21 - Mark Lee / WilcoA
+*/
+body #eb .eb-reading-progress,
+body #eb .eb-reading-progress-sticky {
+	top: 80px !important;
+}
+
+body #eb.is-mobile .eb-reading-progress,
+body #eb.is-mobile .eb-reading-progress-sticky {
+	top: 0px !important;
 }
 
 /*blog navigation*/
