@@ -91,6 +91,15 @@ body #eb.is-mobile .eb-reading-progress-sticky {
 .view-all-blogs {
     padding-top: 40px;
 }
+/* Homepage layout */
+body #eb .eb-mag-blog-image {
+    background-size: contain;
+}
+
+body #eb .eb-mag-grids .magazine-btn-more {
+	display: block;
+	text-align: center;
+}
 /* End - EasBlog */
 
 /* None Joomla / Extensions Specific things */
