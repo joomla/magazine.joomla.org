@@ -58,6 +58,9 @@ RewriteCond %{REQUEST_URI} ^/topics/item/(.*)  [OR]
 RewriteCond %{REQUEST_URI} ^/topics/itemlist/(.*)  [OR]
 RewriteCond %{REQUEST_URI} ^/component/com_k2/(.*)
 RewriteRule ^(.*)$ https://magazine.joomla.org/ [L,R=301,NC]
+
+RewriteRule ^all-issues/november-2020/leadership-interview-wilco-alsemgeest,-operations-dc.*$ https://magazine.joomla.org/all-issues/november-2020/leadership-interview-wilco-alsemgeest-operations-dc? [L,R=301]
+RewriteRule ^all-issues/november-2020/interview-with-justine-ayebale-abunyanga,-vicepresident.*$ https://magazine.joomla.org/all-issues/november-2020/interview-with-justine-ayebale-abunyanga-vicepresident? [L,R=301]
 ###########################################
 
 ###########################################
