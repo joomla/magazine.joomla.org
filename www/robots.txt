@@ -1,0 +1,44 @@
+##Please don't remove folders from disallow.  
+##The allows at the top allow any of the mimetypes listed to be crawled within any folder
+##using long-tail wildcards, these ignore the disallows for the folders below.
+##This gives full render for the search engines whilst preventing full crawls of system 
+##folders
+User-agent: *
+#THIS ALLOWS FULL RENDER AT ENGINES
+Allow: /*.js***************
+Allow: /*.css**************
+Allow: /*.png**************
+Allow: /*.PNG**************
+Allow: /*.jpg**************
+Allow: /*.JPG**************
+Allow: /*.jpeg**************
+Allow: /*.gif**************
+Allow: /*.eot**************
+Allow: /*.woff**************
+Allow: /*.ttf**************
+Allow: /*.svg**************
+Allow: /*.otf**************
+Allow: /*.pdf**************
+Allow: /*.mp3**************
+#THESE FOLDERS SHOULD NEVER BE CRAWLED ANY MIME TYPE ABOVE WILL BE ALLOWED ON RENDER
+Disallow: /administrator/
+Disallow: /1oldjcm25/
+Disallow: /1sandbox/
+Disallow: /2016/
+Disallow: /bin/
+Disallow: /cache/
+Disallow: /cgi-bin/
+Disallow: /cli/
+
+Disallow: /docs/
+Disallow: /includes/
+Disallow: /language/
+Disallow: /layouts/
+Disallow: /libraries/
+
+
+
+
+Disallow: /tmp/
+# JSitemap entries
+Sitemap: https://magazine.joomla.org/index.php?option=com_jmap&view=sitemap&format=xml&lang=en
