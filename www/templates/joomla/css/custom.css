@@ -60,6 +60,36 @@ Added: 2020-04-20 - Mark Lee / WilcoA
 	margin-top: 30px;
 }
 
+/* 
+Added 2021-03-19 - Mark Lee / WilcoA (PR raised by Patrick Jackson)
+Aligns continue reading buttons across the issue category view
+*/
+#eb .eb-mag-grids__item > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#eb .eb-mag .eb-mag-body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+#eb .eb-mag .eb-mag-body p {
+    flex-grow: 1;
+}
+
+#eb .eb-mag .eb-mag-body p:empty {
+    display: none;
+}
+
+/* 
+Added Patrick Jackson 2021-03-10
+Pushes heading down when page scrolls so it's not hidden below the page header.
+*/
+#eb .eb-anchor-link {
+    scroll-margin-top: 60px;
+}
+
 /* Sticky Progress bar
 Added: 2020-06-21 - Mark Lee / WilcoA
 */
