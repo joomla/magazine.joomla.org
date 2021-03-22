@@ -59,6 +59,57 @@ RewriteCond %{REQUEST_URI} ^/topics/itemlist/(.*)  [OR]
 RewriteCond %{REQUEST_URI} ^/component/com_k2/(.*)
 RewriteRule ^(.*)$ https://magazine.joomla.org/ [L,R=301,NC]
 
+# ===== Universal Article Redirection - version for variations of each month as full month name used in new URL format =====
+RewriteRule ^issues/issue-(jan|january)-([0-9]*)/item/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/issue-january-$2/$4 [L,R=301,NC]
+RewriteRule ^issues/issue-(feb|february)-([0-9]*)/item/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/issue-february-$2/$4 [L,R=301,NC]
+RewriteRule ^issues/issue-(mar|march)-([0-9]*)/item/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/issue-march-$2/$4 [L,R=301,NC]
+RewriteRule ^issues/issue-(apr|april)-([0-9]*)/item/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/issue-april-$2/$4 [L,R=301,NC]
+RewriteRule ^issues/issue-(may)-([0-9]*)/item/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/issue-may-$2/$4 [L,R=301,NC]
+RewriteRule ^issues/issue-(jun|june)-([0-9]*)/item/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/issue-june-$2/$4 [L,R=301,NC]
+RewriteRule ^issues/issue-(jul|july)-([0-9]*)/item/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/issue-july-$2/$4 [L,R=301,NC]
+RewriteRule ^issues/issue-(aug|august)-([0-9]*)/item/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/issue-august-$2/$4 [L,R=301,NC]
+RewriteRule ^issues/issue-(sep|sept|september)-([0-9]*)/item/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/issue-september-$2/$4 [L,R=301,NC]
+RewriteRule ^issues/issue-(oct|october)-([0-9]*)/item/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/issue-october-$2/$4 [L,R=301,NC]
+RewriteRule ^issues/issue-(nov|november)-([0-9]*)/item/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/issue-november-$2/$4 [L,R=301,NC]
+RewriteRule ^issues/issue-(dec|december)-([0-9]*)/item/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/issue-december-$2/$4 [L,R=301,NC]
+
+# ===== Redirect old Issue URLs with /issues/issue-month-year/itemlist/category/* format =====
+RewriteRule ^issues/issue-(jan|january)-([0-9]*)/itemlist/category/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/categories/january-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(feb|february)-([0-9]*)/itemlist/category/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/categories/february-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(mar|march)-([0-9]*)/itemlist/category/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/categories/march-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(apr|april)-([0-9]*)/itemlist/category/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/categories/april-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(may)-([0-9]*)/itemlist/category/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/categories/may-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(jun|june)-([0-9]*)/itemlist/category/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/categories/june-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(jul|july)-([0-9]*)/itemlist/category/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/categories/july-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(aug|august)-([0-9]*)/itemlist/category/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/categories/august-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(sep|sept|september)-([0-9]*)/itemlist/category/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/categories/september-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(oct|october)-([0-9]*)/itemlist/category/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/categories/october-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(nov|november)-([0-9]*)/itemlist/category/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/categories/november-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(dec|december)-([0-9]*)/itemlist/category/([0-9]*)-(.*)$ https://magazine.joomla.org/all-issues/categories/december-$2 [L,R=301,NC]
+
+# ===== Redirect old Issue URLs /issues/issue-month-year format =====
+RewriteRule ^issues/issue-(jan|january)-([0-9]*)$ https://magazine.joomla.org/all-issues/categories/january-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(feb|february)-([0-9]*)$ https://magazine.joomla.org/all-issues/categories/february-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(mar|march)-([0-9]*)$ https://magazine.joomla.org/all-issues/categories/march-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(apr|april)-([0-9]*)$ https://magazine.joomla.org/all-issues/categories/april-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(may)-([0-9]*)$ https://magazine.joomla.org/all-issues/categories/may-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(jun|june)-([0-9]*)$ https://magazine.joomla.org/all-issues/categories/june-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(jul|july)-([0-9]*)$ https://magazine.joomla.org/all-issues/categories/july-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(aug|august)-([0-9]*)$ https://magazine.joomla.org/all-issues/categories/august-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(sep|sept|september)-([0-9]*)$ https://magazine.joomla.org/all-issues/categories/september-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(oct|october)-([0-9]*)$ https://magazine.joomla.org/all-issues/categories/october-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(nov|november)-([0-9]*)$ https://magazine.joomla.org/all-issues/categories/november-$2 [L,R=301,NC]
+RewriteRule ^issues/issue-(dec|december)-([0-9]*)$ https://magazine.joomla.org/all-issues/categories/december-$2 [L,R=301,NC]
+
+# ===== Redirect international story URLs to tags =====
+RewriteRule ^international-stories-all/articles-in-(.*)-all$ https://magazine.joomla.org/all-issues/tags/$1 [L,R=301,NC]
+RewriteRule ^faq/(.*)$ https://magazine.joomla.org/faq [L,R=301,NC]
+
+# ===== Other Miscellaneous URLS not covered by rules above =====
+RewriteRule ^issues/issue-july-2013/itemlist/tag/Google%20Summer%20of%20Code$ https://magazine.joomla.org/all-issues/tags/Google%20Summer%20of%20Code [L,R=301,NC]
+RewriteRule ^item/3289-episode-iv-a-new-user-interface-for-the-joomla-backend$ https://magazine.joomla.org/all-issues/november-2017/episode-iv-a-new-user-interface-for-the-joomla-backend [L,R=301,NC]
+RewriteRule ^item/3305-a-new-visual-language-for-joomla-4$ https://magazine.joomla.org/all-issues/february-2018/a-new-visual-language-for-joomla-4  [L,R=301,NC]
+RewriteRule ^subscribe$ https://magazine.joomla.org/magazine-newsletter  [L,R=301,NC]
 RewriteRule ^all-issues/november-2020/leadership-interview-wilco-alsemgeest,-operations-dc.*$ https://magazine.joomla.org/all-issues/november-2020/leadership-interview-wilco-alsemgeest-operations-dc? [L,R=301]
 RewriteRule ^all-issues/november-2020/interview-with-justine-ayebale-abunyanga,-vicepresident.*$ https://magazine.joomla.org/all-issues/november-2020/interview-with-justine-ayebale-abunyanga-vicepresident? [L,R=301]
 ###########################################
