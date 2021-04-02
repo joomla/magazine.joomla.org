@@ -1,4 +1,4 @@
-/* EasBlog */
+/* EasyBlog - General Style Overrides*/
 div#eb {
     clear: both;
 }
@@ -64,15 +64,15 @@ Added: 2020-04-20 - Mark Lee / WilcoA
 Added 2021-03-19 - Mark Lee / WilcoA (PR raised by Patrick Jackson)
 Aligns continue reading buttons across the issue category view
 */
-#eb .eb-mag-grids__item > div {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+#eb .eb-mag-grids__item > div, #eb .eb-blog-grid__content { /* Second class applies to issues layout */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-#eb .eb-mag .eb-mag-body {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
+#eb .eb-mag .eb-mag-body, #eb .eb-blog-grid__body { /* Second class applies to issues layout */
+  display: flex;
+  height: 100%;
+  flex-direction: column;
 }
 #eb .eb-mag .eb-mag-body p {
     flex-grow: 1;
@@ -81,6 +81,112 @@ Aligns continue reading buttons across the issue category view
 #eb .eb-mag .eb-mag-body p:empty {
     display: none;
 }
+
+#eb .eb-mag-grids .eb-mag-blog-image, #eb .eb-blog-grid-image {
+    background-size: contain; /* Changes it from cover which cropped the images */
+    padding-bottom: 48%; /* Was 60% for cover */
+}
+/* EasyBlog Article styles
+- proposed in https://github.com/joomla/magazine.joomla.org/issues/15 by @coolcat-creations
+- Tweaked by @particthistle April 2021
+*/
+#eb .eb-mag .eb-mag-body, #eb .eb-blog-grid__body {
+  font-size: 16px;
+  line-height: 135%;
+}
+#eb .eb-mag .eb-mag-grids__item, #eb .eb-blog-grid__item {
+  padding: 15px;
+}
+#eb .magazine-btn-more, #eb .eb-post-more .btn {
+  font-size: 16px;
+  border: none;
+  background: #1e88e5 !important;
+  color: #fff !important;
+  font-weight: normal;
+  width: 100%;
+}
+#eb .magazine-btn-more:hover, #eb .eb-post-more .btn:hover {
+  background-color: #1773c4 !important;
+}
+#eb .eb-mag a {
+  color: inherit;
+}
+#eb a:link {
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-color: currentcolor;
+  text-decoration-thickness: auto;
+}
+a {
+  color: #08c;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-color: currentcolor;
+  text-decoration-thickness: auto;
+}
+#eb .eb-mag-title, #eb .eb-blog-grid__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 130%;
+  color: #2B3455 !important;
+}
+#eb .eb-mag-thumb {
+  margin: 10px 0;
+  max-height: 160px;
+}
+/* EasyBlog Article styles
+- proposed in https://github.com/joomla/magazine.joomla.org/issues/16 by @coolcat-creations
+- Tweaked by @particthistle April 2021
+*/
+.eb-entry-body {
+  font-size: 16px;
+  line-height: 140%;
+  padding: 0 100px;
+}
+.eb-entry-body .eb-image.eb-post-thumb {
+  max-width: auto;
+  margin: 0 -100px;
+}
+#eb h1 {
+  color: #2E3657;
+  font-size: 36px;
+}
+#eb h2, #eb h3, #eb h4, #eb h5, #eb h6 {
+  margin: 50px 0 20px;
+  color: #E94F34;
+}
+.eb-entry-meta.text-muted a {
+  color: #EA7C55;
+  text-decoration: underline !important;
+}
+.es-post-state {
+  padding: 0 100px;
+}
+.eb-entry-head {
+  padding: 20px 100px;
+}
+#eb .eb-reading-indicator {
+  padding: 4px 8px;
+  display: inline-block;
+  background-color: #1e88e5;
+  color: #fff;
+}
+
+@media(max-width: 768px) { /* Mobile styles applying to above April 2021 improvements */
+    
+    #eb .eb-mag .eb-mag-grids {
+        display: grid;
+        grid-template-columns: auto;
+        margin-bottom: 8px;
+    }
+    
+    #eb .eb-blog-grid__item { /* Displays flex columns at single column on mobile vs 3 columns */
+        flex: 0 0 100%;
+    }
+} /* End mobile styles */
+
 
 /* 
 Added Patrick Jackson 2021-03-10
