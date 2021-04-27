@@ -152,10 +152,10 @@ a {
 }
 #eb h2, #eb h3, #eb h4, #eb h5, #eb h6 {
   margin: 50px 0 20px;
-  color: #E94F34;
+  color: #5091cd;
 }
 .eb-entry-meta.text-muted a {
-  color: #EA7C55;
+  color: #5091cd;
   text-decoration: underline !important;
 }
 .es-post-state {
