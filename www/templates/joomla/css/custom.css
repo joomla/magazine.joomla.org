@@ -168,10 +168,6 @@ a {
 	width: 100%;
 	padding: 20px 100px;
 }
-.view-blogger #eb .eb-post-content { /* Author article list view */
-	width: 100%;
-	padding: 0;
-}
 #eb .eb-reading-indicator {
   padding: 4px 8px;
   display: inline-block;
@@ -223,6 +219,10 @@ a {
     #eb .es-post-state { /* Center reading time indicator on mobile */
       padding: 0px 35px;
       justify-content: center;
+    }
+    .view-blogger #eb .eb-post-content { /* Author article list view */
+	width: 100%;
+	padding: 0;
     }
     #eb h2, #eb h3, #eb h4, #eb h5, #eb h6 {
       margin: 30px 0 20px;
