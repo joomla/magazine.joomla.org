@@ -216,8 +216,13 @@ a {
 	    color: #2E3657;
 	    font-size: 1.6rem;
     }
-    .es-post-state {
+    #eb .es-post-state { /* Center reading time indicator on mobile */
       padding: 0px 35px;
+      justify-content: center;
+    }
+    .view-blogger #eb .eb-post-content { /* Author article list view */
+	width: 100%;
+	padding: 0;
     }
     #eb h2, #eb h3, #eb h4, #eb h5, #eb h6 {
       margin: 30px 0 20px;
@@ -490,7 +495,34 @@ body #eb .eb-mag-grids .magazine-btn-more {
     align-self: baseline
   }
 }
-@media(min-width: 768px) { /* Desktop Styles */
+@media(min-width: 768px) { /* Tablet Styles */
+  .layout-default #eb .eb-post-thumb .eb-post-image img { /* Article view */
+    max-width: none;
+    width: 100%;
+  }
+  .layout-default #eb .eb-posts .eb-post-thumb .eb-post-image img { /* Issues view */
+    max-width: none;
+    width: 100%;
+  }
+  .layout-listings #eb .eb-post-thumb .eb-post-image img { /* Authors list view */
+    max-width: none;
+    width: 100%;
+  }
+  .com_easyblog aside { /* Collapse aside on tablet view */
+    margin-top: 20px;	 
+  }
+  .row-fluid aside.span9 {
+    width: 100%;
+  }
+  .row-fluid aside.span3 {
+    width: 100%;
+    float: none;
+  }
+  #eb .eb-mod-thumb .eb-mod-image img { /* Tidy up thumbs for related articles */
+    max-width: 30%;
+    float:left;
+}
+@media(min-width: 992px) { /* Desktop Styles */
   .layout-default #eb .eb-post-thumb .eb-post-image img { /* Article view */
     max-width: none;
     width: calc(100% + 200px);
@@ -503,9 +535,11 @@ body #eb .eb-mag-grids .magazine-btn-more {
     max-width: none;
     width: calc(100% + 100px);
   }
-  #eb .eb-post-thumb {
+    #eb .eb-post-thumb {
     margin-left: -100px;
   }
+}
+@media(min-width: 768px) { /* Desktop & Tablet Styles */	
 	
   .d-md-none {
     display: none;
