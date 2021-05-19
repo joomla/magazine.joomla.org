@@ -227,6 +227,19 @@ a {
     #eb h2, #eb h3, #eb h4, #eb h5, #eb h6 {
       margin: 30px 0 20px;
     }
+}
+@media(max-width: 979px) {
+    .row-fluid .span9 { /* Stack aside on tablet portrait view */
+      width: 100%;
+    }
+    .row-fluid .span3 {
+      width: 100%;
+      float: none;
+      clear: both;
+    }
+    .com_easyblog aside { /* Add margin at top to space stacked view */
+      margin-top: 20px;	 
+    }
 } /* End mobile styles */
 
 
@@ -510,13 +523,6 @@ body #eb .eb-mag-grids .magazine-btn-more {
   }
   .com_easyblog aside { /* Collapse aside on tablet view */
     margin-top: 20px;	 
-  }
-  .row-fluid aside.span9 {
-    width: 100%;
-  }
-  .row-fluid aside.span3 {
-    width: 100%;
-    float: none;
   }
   #eb .eb-mod-thumb .eb-mod-image img { /* Tidy up thumbs for related articles */
     max-width: 30%;
