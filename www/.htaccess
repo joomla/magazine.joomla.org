@@ -103,7 +103,6 @@ RewriteRule ^issues/issue-(dec|december)-([0-9]*)$ https://magazine.joomla.org/a
 
 # ===== Redirect international story URLs to tags =====
 RewriteRule ^international-stories-all/articles-in-(.*)-all$ https://magazine.joomla.org/all-issues/tags/$1 [L,R=301,NC]
-RewriteRule ^faq/(.*)$ https://magazine.joomla.org/faq [L,R=301,NC]
 
 # ===== Other Miscellaneous URLS not covered by rules above =====
 RewriteRule ^issues/issue-july-2013/itemlist/tag/Google%20Summer%20of%20Code$ https://magazine.joomla.org/all-issues/tags/Google%20Summer%20of%20Code [L,R=301,NC]
