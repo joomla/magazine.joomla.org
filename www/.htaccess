@@ -111,6 +111,9 @@ RewriteRule ^item/3305-a-new-visual-language-for-joomla-4$ https://magazine.joom
 RewriteRule ^subscribe$ https://magazine.joomla.org/magazine-newsletter  [L,R=301,NC]
 RewriteRule ^all-issues/november-2020/leadership-interview-wilco-alsemgeest,-operations-dc.*$ https://magazine.joomla.org/all-issues/november-2020/leadership-interview-wilco-alsemgeest-operations-dc? [L,R=301]
 RewriteRule ^all-issues/november-2020/interview-with-justine-ayebale-abunyanga,-vicepresident.*$ https://magazine.joomla.org/all-issues/november-2020/interview-with-justine-ayebale-abunyanga-vicepresident? [L,R=301]
+RewriteRule ^author-guides/item/71-Article-Submission-Guide$ https://magazine.joomla.org/faq? [L,R=301]
+RewriteRule ^join-joomla-magazine$ https://magazine.joomla.org/about? [L,R=301]
+
 ###########################################
 
 ###########################################
