@@ -125,57 +125,58 @@ RewriteRule ^join-joomla-magazine$ https://magazine.joomla.org/about? [L,R=301]
 	# Default expiration: 1 hour after request
 	ExpiresDefault "now plus 1 hour"
 
-	# CSS and JS expiration: 1 week after request
-	ExpiresByType text/css "now plus 1 week"
-	ExpiresByType application/javascript "now plus 1 week"
-	ExpiresByType application/x-javascript "now plus 1 week"
+	# CSS and JS expiration:
+	ExpiresByType text/css "now plus 6 month"
+	ExpiresByType application/javascript "now plus 6 month"
+	ExpiresByType application/x-javascript "now plus 6 month"
 
-	# Image files expiration: 1 month after request
-	ExpiresByType image/bmp "now plus 1 month"
-	ExpiresByType image/gif "now plus 1 month"
-	ExpiresByType image/jpeg "now plus 1 month"
-	ExpiresByType image/jp2 "now plus 1 month"
-	ExpiresByType image/pipeg "now plus 1 month"
-	ExpiresByType image/png "now plus 1 month"
-	ExpiresByType image/svg+xml "now plus 1 month"
-	ExpiresByType image/tiff "now plus 1 month"
-	ExpiresByType image/vnd.microsoft.icon "now plus 1 month"
-	ExpiresByType image/x-icon "now plus 1 month"
-	ExpiresByType image/ico "now plus 1 month"
-	ExpiresByType image/icon "now plus 1 month"
-	ExpiresByType text/ico "now plus 1 month"
-	ExpiresByType application/ico "now plus 1 month"
-	ExpiresByType image/vnd.wap.wbmp "now plus 1 month"
-	ExpiresByType application/vnd.wap.wbxml "now plus 1 month"
-	ExpiresByType application/smil "now plus 1 month"
+	# Image files expiration:
+	ExpiresByType image/bmp "now plus 6 month"
+	ExpiresByType image/gif "now plus 6 month"
+	ExpiresByType image/jpeg "now plus 6 month"
+	ExpiresByType image/jp2 "now plus 6 month"
+	ExpiresByType image/pipeg "now plus 6 month"
+	ExpiresByType image/png "now plus 6 month"
+	ExpiresByType image/webp "now plus 6 month"
+	ExpiresByType image/svg+xml "now plus 6 month"
+	ExpiresByType image/tiff "now plus 6 month"
+	ExpiresByType image/vnd.microsoft.icon "now plus 6 month"
+	ExpiresByType image/x-icon "now plus 6 month"
+	ExpiresByType image/ico "now plus 1 year"
+	ExpiresByType image/icon "now plus 1 year"
+	ExpiresByType text/ico "now plus 1 year"
+	ExpiresByType application/ico "now plus 1 year"
+	ExpiresByType image/vnd.wap.wbmp "now plus 6 month"
+	ExpiresByType application/vnd.wap.wbxml "now plus 6 month"
+	ExpiresByType application/smil "now plus 6 month"
 
-	# Font files expiration: 1 week after request
-	ExpiresByType application/vnd.ms-fontobject "now plus 1 week"
-	ExpiresByType application/x-font-ttf "now plus 1 week"
-	ExpiresByType application/x-font-opentype "now plus 1 week"
-	ExpiresByType application/x-font-woff "now plus 1 week"
-	ExpiresByType font/woff2 "now plus 1 week"
-	ExpiresByType image/svg+xml "now plus 1 week"
+	# Font files expiration:
+	ExpiresByType application/vnd.ms-fontobject "now plus 6 month"
+	ExpiresByType application/x-font-ttf "now plus 6 month"
+	ExpiresByType application/x-font-opentype "now plus 6 month"
+	ExpiresByType application/x-font-woff "now plus 6 month"
+	ExpiresByType application/font-woff2 "now plus 6 month"
+	ExpiresByType image/svg+xml "now plus 6 month"
 
-	# Audio files expiration: 1 month after request
-	ExpiresByType audio/basic "now plus 1 month"
-	ExpiresByType audio/mid "now plus 1 month"
-	ExpiresByType audio/midi "now plus 1 month"
-	ExpiresByType audio/mpeg "now plus 1 month"
-	ExpiresByType audio/x-aiff "now plus 1 month"
-	ExpiresByType audio/x-mpegurl "now plus 1 month"
-	ExpiresByType audio/x-pn-realaudio "now plus 1 month"
-	ExpiresByType audio/x-wav "now plus 1 month"
+	# Audio files expiration:
+	ExpiresByType audio/basic "now plus 6 month"
+	ExpiresByType audio/mid "now plus 6 month"
+	ExpiresByType audio/midi "now plus 6 month"
+	ExpiresByType audio/mpeg "now plus 6 month"
+	ExpiresByType audio/x-aiff "now plus 6 month"
+	ExpiresByType audio/x-mpegurl "now plus 6 month"
+	ExpiresByType audio/x-pn-realaudio "now plus 6 month"
+	ExpiresByType audio/x-wav "now plus 6 month"
 
 	# Movie files expiration: 1 month after request
-	ExpiresByType application/x-shockwave-flash "now plus 1 month"
-	ExpiresByType x-world/x-vrml "now plus 1 month"
-	ExpiresByType video/x-msvideo "now plus 1 month"
-	ExpiresByType video/mpeg "now plus 1 month"
-	ExpiresByType video/mp4 "now plus 1 month"
-	ExpiresByType video/quicktime "now plus 1 month"
-	ExpiresByType video/x-la-asf "now plus 1 month"
-	ExpiresByType video/x-ms-asf "now plus 1 month"
+	ExpiresByType application/x-shockwave-flash "now plus 6 month"
+	ExpiresByType x-world/x-vrml "now plus 6 month"
+	ExpiresByType video/x-msvideo "now plus 6 month"
+	ExpiresByType video/mpeg "now plus 6 month"
+	ExpiresByType video/mp4 "now plus 6 month"
+	ExpiresByType video/quicktime "now plus 6 month"
+	ExpiresByType video/x-la-asf "now plus 6 month"
+	ExpiresByType video/x-ms-asf "now plus 6 month"
 </IfModule>
 
 	# Disable caching of administrator/index.php
@@ -371,116 +372,6 @@ deny from env=stayout
 ###########################################
 
 ###########################################
-# == Automatic compression of resources ==
-# Automatically serve .css.gz, .css.br, .js.gz or .js.br instead of the original file
-# These are versions of the files pre-compressed with GZip or Brotli, respectively
-<IfModule mod_headers.c>
-    # Serve Brotli compressed CSS files if they exist and the client accepts Brotli.
-    RewriteCond "%{HTTP:Accept-encoding}" "br"
-    RewriteCond "%{REQUEST_FILENAME}\.br" -s
-    RewriteRule "^(.*)\.css" "$1\.css\.br" [QSA]
-
-    # Serve Brotli compressed JS files if they exist and the client accepts Brotli.
-    RewriteCond "%{HTTP:Accept-encoding}" "br"
-    RewriteCond "%{REQUEST_FILENAME}\.br" -s
-    RewriteRule "^(.*)\.js" "$1\.js\.br" [QSA]
-    
-    # Serve correct content types, and prevent double compression.
-    RewriteRule "\.css\.br$" "-" [E=no-gzip:1]
-    RewriteRule "\.css\.br$" "-" [T=text/css,E=no-brotli:1,L]
-    RewriteRule "\.js\.br$" "-" [E=no-gzip:1]
-    RewriteRule "\.js\.br$"  "-" [T=text/javascript,E=no-brotli:1,L]
-    
-    <FilesMatch "(\.js\.br|\.css\.br)$">
-      # Serve correct encoding type.
-      Header append Content-Encoding br
-
-      # Force proxies to cache gzipped & non-gzipped css/js files separately.
-      Header append Vary Accept-Encoding
-    </FilesMatch>
-
-    # Serve gzip compressed CSS files if they exist and the client accepts gzip.
-    RewriteCond "%{HTTP:Accept-encoding}" "gzip"
-    RewriteCond "%{REQUEST_FILENAME}\.gz" -s
-    RewriteRule "^(.*)\.css" "$1\.css\.gz" [QSA]
-
-    # Serve gzip compressed JS files if they exist and the client accepts gzip.
-    RewriteCond "%{HTTP:Accept-encoding}" "gzip"
-    RewriteCond "%{REQUEST_FILENAME}\.gz" -s
-    RewriteRule "^(.*)\.js" "$1\.js\.gz" [QSA]
-
-    # Serve correct content types, and prevent mod_filter double gzip.
-    # Also set it as the last rule to prevent the Front- or Backend protection from preventing access to the .gz file.
-    RewriteRule "\.css\.gz$" "-" [E=no-brotli:1]
-    RewriteRule "\.css\.gz$" "-" [T=text/css,E=no-gzip:1,L]
-    RewriteRule "\.js\.gz$" "-" [E=no-brotli:1]
-    RewriteRule "\.js\.gz$" "-" [T=text/javascript,E=no-gzip:1,L]
-
-    <FilesMatch "(\.js\.gz|\.css\.gz)$">
-      # Serve correct encoding type.
-      Header append Content-Encoding gzip
-
-      # Force proxies to cache gzipped & non-gzipped css/js files separately.
-      Header append Vary Accept-Encoding
-    </FilesMatch>
-</IfModule>
-
-## Automatically compress by MIME type using mod_brotli. Takes priority due to better compression ratio.
-<IfModule mod_brotli.c>
-	AddOutputFilterByType BROTLI_COMPRESS text/plain text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript text/javascript image/svg+xml
-</IfModule>
-
-## Automatically compress by MIME type using mod_filter.
-<IfModule mod_filter.c>
-	AddOutputFilterByType DEFLATE text/plain text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript text/javascript image/svg+xml
-</IfModule>
-
-## Fallback to mod_gzip when neither mod_brotli nor mod_filter is available
-<IfModule !mod_brotli.c>
-	<IfModule !mod_filter.c>
-		<IfModule mod_gzip.c>
-			mod_gzip_on Yes
-			mod_gzip_dechunk Yes
-			mod_gzip_keep_workfiles No
-			mod_gzip_can_negotiate Yes
-			mod_gzip_add_header_count Yes
-			mod_gzip_send_vary Yes
-			mod_gzip_min_http 1000
-			mod_gzip_minimum_file_size 300
-			mod_gzip_maximum_file_size 512000
-			mod_gzip_maximum_inmem_size 60000
-			mod_gzip_handle_methods GET
-			mod_gzip_item_include file \.(html?|txt|css|js|php|pl|xml|rb|py|svg|scgz)$
-			mod_gzip_item_include mime ^text/javascript$
-			mod_gzip_item_include mime ^text/plain$
-			mod_gzip_item_include mime ^text/xml$
-			mod_gzip_item_include mime ^text/css$
-			mod_gzip_item_include mime ^application/xml$
-			mod_gzip_item_include mime ^application/xhtml+xml$
-			mod_gzip_item_include mime ^application/rss+xml$
-			mod_gzip_item_include mime ^application/javascript$
-			mod_gzip_item_include mime ^application/x-javascript$
-			mod_gzip_item_include mime ^image/svg+xml$
-			mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
-			mod_gzip_item_include handler ^cgi-script$
-			mod_gzip_item_include handler ^server-status$
-			mod_gzip_item_include handler ^server-info$
-			mod_gzip_item_include handler ^application/x-httpd-php
-			mod_gzip_item_exclude mime ^image/.*
-		</ifmodule>
-	</IfModule>
-</IfModule>
-##### Automatic compression of resources -- END
-## Force GZip compression for mangled Accept-Encoding headers
-<IfModule mod_setenvif.c>
-	<IfModule mod_headers.c>
-		SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
-		RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
-	</IfModule>
-</IfModule>
-###########################################
-
-###########################################
 # Set the UTF-8 character set as the default
 AddDefaultCharset utf-8
 
@@ -592,7 +483,7 @@ RewriteRule !^index.php$ - [F]
 	Header always set Cross-Origin-Opener-Policy "same-origin"
 	# Content-Security-Policy
 	# The header is unique to every website
-	Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.joomla.org https://hcaptcha.com https://*.hcaptcha.com https://*.pinterest.com https://*.googletagservices.com https://*.google.ac https://*.google.ad https://*.google.ae https://*.google.al https://*.google.am https://*.google.as https://*.google.at https://*.google.az https://*.google.ba https://*.google.be https://*.google.bf https://*.google.bg https://*.google.bi https://*.google.bj https://*.google.bs https://*.google.bt https://*.google.by https://*.google.ca https://*.google.cat https://*.google.cc https://*.google.cd https://*.google.cf https://*.google.cg https://*.google.ch https://*.google.ci https://*.google.cl https://*.google.cm https://*.google.cn https://*.google.co.ao https://*.google.co.bw https://*.google.co.ck https://*.google.co.cr https://*.google.co.id https://*.google.co.il https://*.google.co.in https://*.google.co.jp https://*.google.co.ke https://*.google.co.kr https://*.google.co.ls https://*.google.co.ma https://*.google.co.mz https://*.google.co.nz https://*.google.co.th https://*.google.co.tz https://*.google.co.ug https://*.google.co.uk https://*.google.co.uz https://*.google.co.ve https://*.google.co.vi https://*.google.co.za https://*.google.co.zm https://*.google.co.zw https://*.google.com https://*.google.com.af https://*.google.com.ag https://*.google.com.ai https://*.google.com.ar https://*.google.com.au https://*.google.com.bd https://*.google.com.bh https://*.google.com.bn https://*.google.com.bo https://*.google.com.br https://*.google.com.bz https://*.google.com.co https://*.google.com.cu https://*.google.com.cy https://*.google.com.do https://*.google.com.ec https://*.google.com.eg https://*.google.com.et https://*.google.com.fj https://*.google.com.gh https://*.google.com.gi https://*.google.com.gt https://*.google.com.hk https://*.google.com.jm https://*.google.com.kh https://*.google.com.kw https://*.google.com.lb https://*.google.com.lc https://*.google.com.ly https://*.google.com.mm https://*.google.com.mt https://*.google.com.mx https://*.google.com.my https://*.google.com.na https://*.google.com.nf https://*.google.com.ng https://*.google.com.ni https://*.google.com.np https://*.google.com.om https://*.google.com.pa https://*.google.com.pe https://*.google.com.pg https://*.google.com.ph https://*.google.com.pk https://*.google.com.pr https://*.google.com.py https://*.google.com.qa https://*.google.com.sa https://*.google.com.sb https://*.google.com.sg https://*.google.com.sl https://*.google.com.sv https://*.google.com.tj https://*.google.com.tr https://*.google.com.tw https://*.google.com.ua https://*.google.com.uy https://*.google.com.vc https://*.google.com.vn https://*.google.cv https://*.google.cz https://*.google.de https://*.google.dj https://*.google.dk https://*.google.dm https://*.google.dz https://*.google.ee https://*.google.es https://*.google.fi https://*.google.fm https://*.google.fr https://*.google.ga https://*.google.ge https://*.google.gf https://*.google.gg https://*.google.gl https://*.google.gm https://*.google.gp https://*.google.gr https://*.google.gy https://*.google.hn https://*.google.hr https://*.google.ht https://*.google.hu https://*.google.ie https://*.google.im https://*.google.io https://*.google.iq https://*.google.is https://*.google.it https://*.google.je https://*.google.jo https://*.google.kg https://*.google.ki https://*.google.kz https://*.google.la https://*.google.li https://*.google.lk https://*.google.lt https://*.google.lu https://*.google.lv https://*.google.md https://*.google.me https://*.google.mg https://*.google.mk https://*.google.ml https://*.google.mn https://*.google.ms https://*.google.mu https://*.google.mv https://*.google.mw https://*.google.ne https://*.google.nl https://*.google.no https://*.google.nr https://*.google.nu https://*.google.pl https://*.google.pn https://*.google.ps https://*.google.pt https://*.google.ro https://*.google.rs https://*.google.ru https://*.google.rw https://*.google.sc https://*.google.se https://*.google.sh https://*.google.si https://*.google.sk https://*.google.sm https://*.google.sn https://*.google.so https://*.google.sr https://*.google.st https://*.google.td https://*.google.tg https://*.google.tk https://*.google.tl https://*.google.tm https://*.google.tn https://*.google.to https://*.google.tt https://*.google.vg https://*.google.vu https://*.google.ws https://*.googlesyndication.com https://*.googleadservices.com https://*.google-analytics.com https://*.googlesyndication.com https://*.googletagmanager.com https://*.googleapis.com https://*.gstatic.com https://*.google.com https://ads.joomla.org https://*.pingdom.net https://*.twitter.com https://*.twimg.com https://*.facebook.net https://*.facebook.com https://*.googleapis.com https://*.ostraining.com https://ostraining.com https://*.wistia.com https://*.wistia.net https://*.litix.io https://*.doubleclick.net https://*.spreadshirt.ie https://*.spreadshirts.net https://*.spreadshirt.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://*.joomla.org https://hcaptcha.com https://*.hcaptcha.com https://*.googlesyndication.com https://*.googleapis.com https://*.ostraining.com https://ostraining.com https://*.twitter.com https://*.twimg.com https://*.spreadshirt.ie https://unpkg.com; connect-src 'self' https://hcaptcha.com https://*.hcaptcha.com https://csi.gstatic.com https://*.googlesyndication.com https://*.pingdom.net https://*.wistia.com https://*.litix.io https://*.doubleclick.net https://*.akamaihd.net https://*.litix.io https://*.google-analytics.com https://*.ostraining.com https://ostraining.com https://*.twitter.com https://shop.spreadshirt.ie https://*.spreadshirt.net; frame-src 'self' https://*.joomla.org https://hcaptcha.com https://*.hcaptcha.com https://*.youtube-nocookie.com https://googleads.g.doubleclick.net/ https://googleads.g.doubleclick.net https://*.googlesyndication.com https://*.slideshare.net https://*.twimg.com https://*.adfront.org https://*.twitter.com https://*.facebook.net https://*.facebook.com https://*.wistia.com https://*.google.com https://*.googletagmanager.com https://*.youtube.com https://*.slideshare.net https://*.vimeo.com https://*.spreadshirt.ie https://*.spreadshirtsandbox.net/; font-src 'self' data: https://*.googlesyndication.com https://*.gstatic.com https://*.joomla.org https://*.ostraining.com https://ostraining.com https://*.spreadshirt.ie; img-src 'self' data: https:; media-src 'self' blob: https://*.googlesyndication.com https://*.akamaihd.net https://*.wistia.net https://*.wistia.com; worker-src 'self' blob: https://*.googlesyndication.com https://*.wistia.com; object-src 'self' https://*.googlesyndication.com https://*.macromedia.com https://embedwistia-a.akamaihd.net https://*.youtube-nocookie.com; frame-ancestors 'self' https://*.joomla.org https://joomla.org.au/; report-uri https://joomla.report-uri.com/r/t/csp/enforce"
+	Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.joomla.org https://hcaptcha.com https://*.hcaptcha.com https://*.pinterest.com https://*.googletagservices.com https://*.google.ac https://*.google.ad https://*.google.ae https://*.google.al https://*.google.am https://*.google.as https://*.google.at https://*.google.az https://*.google.ba https://*.google.be https://*.google.bf https://*.google.bg https://*.google.bi https://*.google.bj https://*.google.bs https://*.google.bt https://*.google.by https://*.google.ca https://*.google.cat https://*.google.cc https://*.google.cd https://*.google.cf https://*.google.cg https://*.google.ch https://*.google.ci https://*.google.cl https://*.google.cm https://*.google.cn https://*.google.co.ao https://*.google.co.bw https://*.google.co.ck https://*.google.co.cr https://*.google.co.id https://*.google.co.il https://*.google.co.in https://*.google.co.jp https://*.google.co.ke https://*.google.co.kr https://*.google.co.ls https://*.google.co.ma https://*.google.co.mz https://*.google.co.nz https://*.google.co.th https://*.google.co.tz https://*.google.co.ug https://*.google.co.uk https://*.google.co.uz https://*.google.co.ve https://*.google.co.vi https://*.google.co.za https://*.google.co.zm https://*.google.co.zw https://*.google.com https://*.google.com.af https://*.google.com.ag https://*.google.com.ai https://*.google.com.ar https://*.google.com.au https://*.google.com.bd https://*.google.com.bh https://*.google.com.bn https://*.google.com.bo https://*.google.com.br https://*.google.com.bz https://*.google.com.co https://*.google.com.cu https://*.google.com.cy https://*.google.com.do https://*.google.com.ec https://*.google.com.eg https://*.google.com.et https://*.google.com.fj https://*.google.com.gh https://*.google.com.gi https://*.google.com.gt https://*.google.com.hk https://*.google.com.jm https://*.google.com.kh https://*.google.com.kw https://*.google.com.lb https://*.google.com.lc https://*.google.com.ly https://*.google.com.mm https://*.google.com.mt https://*.google.com.mx https://*.google.com.my https://*.google.com.na https://*.google.com.nf https://*.google.com.ng https://*.google.com.ni https://*.google.com.np https://*.google.com.om https://*.google.com.pa https://*.google.com.pe https://*.google.com.pg https://*.google.com.ph https://*.google.com.pk https://*.google.com.pr https://*.google.com.py https://*.google.com.qa https://*.google.com.sa https://*.google.com.sb https://*.google.com.sg https://*.google.com.sl https://*.google.com.sv https://*.google.com.tj https://*.google.com.tr https://*.google.com.tw https://*.google.com.ua https://*.google.com.uy https://*.google.com.vc https://*.google.com.vn https://*.google.cv https://*.google.cz https://*.google.de https://*.google.dj https://*.google.dk https://*.google.dm https://*.google.dz https://*.google.ee https://*.google.es https://*.google.fi https://*.google.fm https://*.google.fr https://*.google.ga https://*.google.ge https://*.google.gf https://*.google.gg https://*.google.gl https://*.google.gm https://*.google.gp https://*.google.gr https://*.google.gy https://*.google.hn https://*.google.hr https://*.google.ht https://*.google.hu https://*.google.ie https://*.google.im https://*.google.io https://*.google.iq https://*.google.is https://*.google.it https://*.google.je https://*.google.jo https://*.google.kg https://*.google.ki https://*.google.kz https://*.google.la https://*.google.li https://*.google.lk https://*.google.lt https://*.google.lu https://*.google.lv https://*.google.md https://*.google.me https://*.google.mg https://*.google.mk https://*.google.ml https://*.google.mn https://*.google.ms https://*.google.mu https://*.google.mv https://*.google.mw https://*.google.ne https://*.google.nl https://*.google.no https://*.google.nr https://*.google.nu https://*.google.pl https://*.google.pn https://*.google.ps https://*.google.pt https://*.google.ro https://*.google.rs https://*.google.ru https://*.google.rw https://*.google.sc https://*.google.se https://*.google.sh https://*.google.si https://*.google.sk https://*.google.sm https://*.google.sn https://*.google.so https://*.google.sr https://*.google.st https://*.google.td https://*.google.tg https://*.google.tk https://*.google.tl https://*.google.tm https://*.google.tn https://*.google.to https://*.google.tt https://*.google.vg https://*.google.vu https://*.google.ws https://*.googlesyndication.com https://*.googleadservices.com https://*.google-analytics.com https://*.googlesyndication.com https://*.googletagmanager.com https://*.googleapis.com https://*.gstatic.com https://*.google.com https://*.twitter.com https://*.twimg.com https://*.facebook.net https://*.facebook.com https://*.googleapis.com https://*.ostraining.com https://ostraining.com https://*.wistia.com https://*.wistia.net https://*.litix.io https://*.doubleclick.net https://*.spreadshirt.ie https://*.spreadshirts.net https://*.spreadshirt.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://*.joomla.org https://hcaptcha.com https://*.hcaptcha.com https://*.googlesyndication.com https://*.googleapis.com https://*.ostraining.com https://ostraining.com https://*.twitter.com https://*.twimg.com https://*.spreadshirt.ie https://unpkg.com; connect-src 'self' https://hcaptcha.com https://*.hcaptcha.com https://csi.gstatic.com https://*.googlesyndication.com https://*.wistia.com https://*.litix.io https://*.doubleclick.net https://*.akamaihd.net https://*.litix.io https://*.google-analytics.com https://*.ostraining.com https://ostraining.com https://*.twitter.com https://shop.spreadshirt.ie https://*.spreadshirt.net; frame-src 'self' https://*.joomla.org https://hcaptcha.com https://*.hcaptcha.com https://*.youtube-nocookie.com https://googleads.g.doubleclick.net/ https://googleads.g.doubleclick.net https://*.googlesyndication.com https://*.slideshare.net https://*.twimg.com https://*.adfront.org https://*.twitter.com https://*.facebook.net https://*.facebook.com https://*.wistia.com https://*.google.com https://*.googletagmanager.com https://*.youtube.com https://*.slideshare.net https://*.vimeo.com https://*.spreadshirt.ie https://*.spreadshirtsandbox.net/; font-src 'self' data: https://*.googlesyndication.com https://*.gstatic.com https://*.joomla.org https://*.ostraining.com https://ostraining.com https://*.spreadshirt.ie; img-src 'self' data: https:; media-src 'self' blob: https://*.googlesyndication.com https://*.akamaihd.net https://*.wistia.net https://*.wistia.com; worker-src 'self' blob: https://*.googlesyndication.com https://*.wistia.com; object-src 'self' https://*.googlesyndication.com https://*.macromedia.com https://embedwistia-a.akamaihd.net https://*.youtube-nocookie.com; frame-ancestors 'self' https://*.joomla.org https://joomla.org.au/; report-uri https://joomla.report-uri.com/r/t/csp/enforce"
 </IfModule>
 
 ## Since Joomla 3.9.21
@@ -615,3 +506,17 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php [L]
 ###########################################
+
+### LITESPEED_CACHE_START - Do not remove this line
+<IfModule LiteSpeed>
+CacheLookup on
+## Uncomment the following directives if you has a separate mobile view
+##RewriteEngine On
+##RewriteCond %{HTTP_USER_AGENT} Mobile|Android|Silk/|Kindle|BlackBerry|Opera\ Mini|Opera\ Mobi [NC] 
+##RewriteRule .* - [E=Cache-Control:vary=ismobile]
+## Uncomment the following directives to enable login remember me
+##RewriteCond %{HTTP_COOKIE} ^.*joomla_remember_me.*$
+##RewriteCond %{HTTP_COOKIE} !^.*_lscache_vary.*$
+##RewriteRule .* - [E=cache-control:no-cache]
+</IfModule>
+### LITESPEED_CACHE_END
